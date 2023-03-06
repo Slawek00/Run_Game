@@ -10,16 +10,53 @@
 </head>
 <body>
     <div id="menu">
-
         <img src="assets/GUI/title.png">
-        <button id="playButton"></button><br>
-        <button id="levelButton"></button><br>
-        <button id="creditButton"></button><br>
-        <button id="soundButton"></button>
+        <div class="container">
+            <button class="button" onclick="play()">Play</button><br>
+            <button class="button" onclick="level()">Level</button><br>
+            <button class="button" onclick="credits()">Credit</button><br>
+        </div>
+    </div>
+    <div id="selectLevel">
+        <button class="backButton" onclick="backSL()">Back</button>
+    </div>
+    <div id="credits">
+        <h1>Author: Sławomir Jałojda</h1>
+        <h2>Assets: <br>
+            <a href="https://itch.io/game-assets/free/tag-jungle">itch.io</a><br>
+            <a href="https://www.gameart2d.com/freebies.html">gameart2d.com</a>
+        </h2>
+        <button class="backButton" onclick="backC()">Back</button>
     </div>
     <canvas id="canvasGame"></canvas>
     <script>
-
+        const canvas = document.querySelector("canvas")
+        const menu = document.getElementById("menu")
+        const selectLevel = document.getElementById("selectLevel")
+        const credit = document.getElementById("credits")
+        canvas.style.display = "none"
+        selectLevel.style.display = "none"
+        credit.style.display = "none"
+        function play(){
+            menu.style.display = "none"
+            canvas.style.display = "block"
+        }
+        function level(){
+            menu.style.display = "none"
+            selectLevel.style.display = "block"
+        }
+        function credits(){
+            menu.style.display = "none"
+            credit.style.display = "block"
+        }
+        function backSL(){
+            selectLevel.style.display = "none"
+            menu.style.display = "block"
+        }
+        function backC(){
+            credit.style.display = "none"
+            menu.style.display = "block"
+        }
     </script>
     <script type="module" src="main.js"></script>
 </body>

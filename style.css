@@ -1,4 +1,9 @@
-#menu{
+@font-face {
+    font-family: Climate;
+    src: url("fonts/ClimateCrisis-Regular-VariableFont_YEAR.ttf");
+}
+
+#menu, #credits, #selectLevel{
     width: 800px;
     height: 600px;
     position: absolute;
@@ -12,45 +17,44 @@
 
 #menu img{
     width: 500px;
-    height: 300px;
+    height: 250px;
     margin-top: 50px;
     margin-left: 150px;
 }
 
-#playButton{
-    background-image: url("assets/GUI/btn/play.png");
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
-    border-radius: 55px;
-    border: none;
+.button{
+    width: 500px;
+    height: 60px;
+    margin-left: 150px;
+    background-color: #2AAA8A;
+    border: black 2px;
+    color: white;
+    font-family: Climate;
+    font-size: 38px;
+    border-radius: 20px;
+    margin-top: 10px;
 }
 
-#levelButton{
-    background-image: url("assets/GUI/btn/menu.png");
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
-    border-radius: 55px;
-    border: none;
+.button:hover, .backButton:hover{
+    background-color:#000000;
+    cursor:pointer;
 }
 
-#soundButton{
-    background-image: url("assets/GUI/btn/music_off.png");
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
-    border-radius: 55px;
-    border: none;
+.backButton{
+    width: 250px;
+    height: 60px;
+    background-color: #2AAA8A;
+    border: black 2px;
+    color: white;
+    font-family: Climate;
+    font-size: 30px;
+    border-radius: 20px;
+    margin-top: 5px;
 }
 
-#creditButton{
-    background-image: url("assets/GUI/btn/about.png");
-    width: 150px;
-    height: 150px;
-    background-size: 150px 150px;
-    border-radius: 55px;
-    border: none;
+
+body{
+    background-color: #90EE90
 }
 
 canvas{
